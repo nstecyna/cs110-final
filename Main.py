@@ -115,8 +115,7 @@ class Controller:
 			if isComplete(): #more than one of these?
 				completion = True
 				final_completion += 1
-		if final_completion = 4 #number of total puzzles, may not need this if it just is done in order.. but more if statements for combined puzzles if in order anyways                                                                                      jjjjjjlkjppppppppppppppppppjjjjjjjjjjjjh                                                                                     
-
+		if final_completion = 4 #number of total puzzles, may not need this if it just is done in order.. but more if statements for combined puzzles if in order
 		
 		
 def main():
