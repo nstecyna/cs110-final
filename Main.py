@@ -1,14 +1,8 @@
-import pygame
-import view
-import puzzle
-import key
-import lock
-
-#lab - part B*
-
-#git repository setup
-
-#code, planning, proposal
+import Pygame
+import View
+import Puzzle
+import Key
+import Lock
 
 class Controller:	
 
@@ -31,36 +25,99 @@ class Controller:
 				pos = self.position.copy()
 
 				rightside_rect1 = pygame.Rect(top_x, top_y, bottom_x, bottom_y)
-				left_side_rect1 = pygame.Rect()
-				keyRect = pygame.Rect(top_x, top_y, bottom_x, bottom_y)
-				puzzleRect = pygame.Rect()
-				lockRectZoom = pygame.Rect()
+				leftside_rect1 = pygame.Rect()
+				key1_rect = pygame.Rect(top_x, top_y, bottom_x, bottom_y)
+				puzzle1_rect = pygame.Rect()
+				lock1_rect = pygame.Rect()
+				lock1_rectzoom = pygame.Rect()
 
-				#do we need this? maybe just to organize if we don't...
+				############ view1 ###########
 
 				if rightside_rect1.collidepoint(event.pos):
-					
-				if left_side_rect1.collidepoint(event.pos):
-										
+					self.view2 = pygame.display.set_mode((self.width, self.height))
 
-				if keyRect.collidepoint(event.pos):
+				if leftside_rect1.collidepoint(event.pos):
+					self.view4 = pygame.display.set_mode((self.width, self.height))					
+					
+				if key1_rect.collidepoint(event.pos): #may literally zoom in instead of moving to a new view
 					#"zoom" in (basically new view)
 										
-					self.view5 = pygame,display,set_mode((self.width, self.height))
+					self.view5 = pygame.display.set_mode((self.width, self.height))
 
-				if puzzleRect.collidepoint(event.pos):
+				if puzzle1_rect.collidepoint(event.pos):
 					#"zoom" in	
-					self.view6 = pygame,display,set_mode((self.width, self.height))
+					self.view6 = pygame.display.set_mode((self.width, self.height))
 			
-				if lockRectZoom(event.pos):
+				if lock1_rect.collidepoint(event.pos):
 
-					self.view7 = pygame,display,set_mode((self.width, self.height))
+					self.view7 = pygame.display.set_mode((self.width, self.height))
 
-				if(lockRectZoom.collidepoint(event.pos) and key1_inhand):
+				if(lock1_rectzoom.collidepoint(event.pos) and key1_inhand):
 					lock.Unlock()					
-				
-				if(lockRectZoom.collidepoint(event.pos) and key2_inhand):
+			
+
+				########## view2 ###########
+				if rightside_rect2.collidepoint(event.pos):
+					self.view3 = pygame.display.set_mode((self.width, self.height))
+
+				if leftside_rect2.collidepoint(event.pos):
+					self.view1 = pygame.display.set_mode((self.width, self.height))	
+
+				if key2_rect.collidepoint(event.pos):
+					#"zoom" in (basically new view)
+										
+					self.view8 = pygame.display.set_mode((self.width, self.height))
+
+				if puzzle2_rect.collidepoint(event.pos):
+					#"zoom" in	
+					self.view9 = pygame.display.set_mode((self.width, self.height))
+			
+				if lock2_rect.collidepoint(event.pos):
+
+					self.view10 = pygame.display.set_mode((self.width, self.height))
+
+
+				if(lock2_rectzoom.collidepoint(event.pos) and key2_inhand):
 					lock.Unlock()
+					
+				############ view3 ############
+				
+				if rightside_rect3.collidepoint(event.pos):
+					self.view2 = pygame.display.set_mode((self.width, self.height))
+
+				if leftside_rect3.collidepoint(event.pos):
+					self.view4 = pygame.display.set_mode((self.width, self.height))	
+
+				if key2_rect.collidepoint(event.pos):
+					#"zoom" in (basically new view)
+										
+	                 	if puzzle2_rect.collidepoint(event.pos):
+					#"zoom" in 
+					self.view9 = pygame.display.set_mode((self.width, self.height))
+			
+				if lock2_rect.collidepoint(event.pos):
+
+					self.view10 = pygame.display.set_mode((self.width, self.height))
+
+
+				if(lock2_rectzoom.collidepoint(event.pos) and key2_inhand):
+					lock.Unlock()
+
+				############# view4 ############
+
+
+		
+		#Check if puzzled are correct
+		puzzles = [puzzle1, puzzle2, puzzle3, puzzle4]
+		for puzzle in puzzles:
+			completion = False
+			final_completion = 1
+			if isComplete(): #more than one of these?
+				completion = True
+				final_completion += 1
+		if final_completion = 4 #number of total puzzles, may not need this if it just is done in order.. but more if statements for combined puzzles if in order anyways                                                                                      jjjjjjlkjppppppppppppppppppjjjjjjjjjjjjh                                                                                     
+
+		
 		
 def main():
 	main_program = Controller()
