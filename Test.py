@@ -6,23 +6,34 @@ class Controller:
 		pygame.init()
 		self.width = width
 		self.height = height
-		self.screen = pygame.display.set_mode((self.width, self.height))
+		#self.screen = pygame.display.set_mode((self.width, self.height))
 		
-		#self.background = pygame.image.load('lab1.JPG')
-		#background_rect = self.background.get_rect()
-		self.background = pygame.Surface(self.screen.get_size()).convert()
-		self.background.fill((255,255,255))
-		self.screen.blit(self.background, (0,0))
-		pygame.display.update()
+		#self.background = pygame.image.load('lab1.png').convert()
+		#self.background_rect = self.background.get_rect()
+		#self.background = pygame.Surface(self.screen.get_size()).convert()
+		#self.background.fill((255,255,255))
+		#self.screen.blit((self.background), [0,0])
+		#pygame.display.update()
 		
+	def mainloop(self):
+	
+		pygame.key.set_repeat(1,50)
+		running = True
+
+		while running:
+		
+			for event in pygame.event.get():
+				if event.type == pygame.QUIT:
+					running = False
+			self.screen = pygame.display.set_mode((1000, 700))
+			self.background = pygame.Surface(self.screen.get_size()).convert()
+			self.background = pygame.image.load('lab1.png').convert()
+		
+			self.screen.blit((self.background),(0,0))
+			pygame.display.update()
+
+
 def main():
 	controller = Controller()
-	pygame.key.set_repeat(1,50)
-	running = True
-
-	while running:
-		
-		for event in pygame.event.get():
-			if event.type == pygame.QUIT:
-				running = False
+	mainloop = controller.mainloop()
 main()
