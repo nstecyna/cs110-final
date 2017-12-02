@@ -2,18 +2,22 @@ import pygame
 
 class Controller:
 
-	def __init__(self, width = 800, height = 500):
+	def __init__(self, width = 1200, height = 800):
 		pygame.init()
 		self.width = width
 		self.height = height
-		#self.screen = pygame.display.set_mode((self.width, self.height))
+		self.screen = pygame.display.set_mode((self.width, self.height))
 		
-		#self.background = pygame.image.load('lab1.png').convert()
+		self.background = pygame.image.load('lab1.png').convert()
+		self.background = pygame.transform.scale(self.background, (self.width, self.height))
 		#self.background_rect = self.background.get_rect()
 		#self.background = pygame.Surface(self.screen.get_size()).convert()
+		
 		#self.background.fill((255,255,255))
-		#self.screen.blit((self.background), [0,0])
-		#pygame.display.update()
+		
+		self.screen.blit((self.background), [0,0])
+		
+		pygame.display.update()
 		
 	def mainloop(self):
 	
@@ -25,12 +29,10 @@ class Controller:
 			for event in pygame.event.get():
 				if event.type == pygame.QUIT:
 					running = False
-			self.screen = pygame.display.set_mode((1000, 700))
-			self.background = pygame.Surface(self.screen.get_size()).convert()
-			self.background = pygame.image.load('lab1.png').convert()
-		
-			self.screen.blit((self.background),(0,0))
-			pygame.display.update()
+				
+				#if clicked to new view
+					#self.background = pygame.image.load('''that view.background''').convert()
+					#self.background = pygame.transform.scale(self.background, (self.width, self.height))
 
 
 def main():
