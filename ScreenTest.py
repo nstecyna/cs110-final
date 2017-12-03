@@ -45,9 +45,22 @@ class Controller:
 					self.screen.blit((self.background), [0,0])
 					pygame.display.update()
 
-				if self.leftside_rect1.collidepoint(event.pos):
+				elif self.leftside_rect1.collidepoint(event.pos):
 					print('clicked left box')
-					#self.view4 = pygame.display.set_mode((self.width, self.height))	
+					self.background = pygame.display.set_mode((self.width, self.height))
+					self.background = pygame.image.load('lab4.jpg').convert()
+					self.background = pygame.transform.scale(self.background, (self.width, self.height))
+					self.screen.blit((self.background), [0,0])
+					pygame.display.update()
+					#self.view4 = pygame.display.set_mode((self.width, self.height))
+
+				if self.background == :
+					if self.rightside_rect1.collidepoint(event.pos):
+						self.background = pygame.display.set_mode((self.width, self.height))
+						self.background = pygame.image.load('lab3.jpg').convert()
+						self.background = pygame.transform.scale(self.background, (self.width, self.height))
+						self.screen.blit((self.background), [0,0])
+						pygame.display.update()	
 
 				#if clicked to new view
 					#self.background = pygame.image.load('''that view.background''').convert()

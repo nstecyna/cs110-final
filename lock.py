@@ -1,4 +1,4 @@
-class Lock
+class Lock:
 	def __init__(self, index, coordinates, img_file):
 		self.id = index
 		self.image = pygame.image.load(img_file).convert.alpha()
@@ -6,3 +6,5 @@ class Lock
 		self.top_y = coordinates[1]
 		self.bottom_x = coordinates[2]
 		self.bottom_y = coordinates[3]
+	
+		lock_rect = pygame.Rect(self.top_x, self.top_y, self.bottom_x, self.bottom_y)
