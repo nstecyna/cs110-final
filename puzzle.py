@@ -1,10 +1,10 @@
 class Puzzle:
-	def __init__(self, index, coordinates, buttonList):
+	def __init__(self, index, coordinates, size, buttonList):
 		self.id = index
 		self.top_x = coordinates[0]
 		self.top_y = coordinates[1]
-		self.bottom_x = coordinates[2]
-		self.bottom_y = coordinates[3]
+		self.width = size[0]
+		self.weight = size[1]
 		self.buttonList = buttonList
 
 	def isComplete(self):
