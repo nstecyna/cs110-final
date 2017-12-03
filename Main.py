@@ -17,17 +17,19 @@ class Controller:
 		self.key = key
 		self.lock = lock
 
+		self.rightside_rect1 = pygame.Rect(top_x, top_y, bottom_x, bottom_y) #how to access the top_x etc. from classes?
+		self.leftside_rect1 = pygame.Rect(top_x, top_y, bottom_x, bottom_y)
+		self.key1_rect = pygame.Rect(top_x, top_y, bottom_x, bottom_y)
+		self.puzzle1_rect = pygame.Rect(top_x, top_y, bottom_x, bottom_y)
+		self.lock1_rect = pygame.Rect(top_x, top_y, bottom_x, bottom_y)
+ 		self.lock1_rectzoom = pygame.Rect(top_x, top_y, bottom_x, bottom_y)		
+		
+
 	def mainLoop(self):
 		#refreshes the screen
 		#check if something's click, define what that click does
+		
 		for event in pygame.event.get():
-
-			rightside_rect1 = pygame.Rect(top_x, top_y, bottom_x, bottom_y) #how to access the top_x etc. from classes?
-			leftside_rect1 = pygame.Rect(top_x, top_y, bottom_x, bottom_y)
-			key1_rect = pygame.Rect(top_x, top_y, bottom_x, bottom_y)
-			puzzle1_rect = pygame.Rect(top_x, top_y, bottom_x, bottom_y)
-			lock1_rect = pygame.Rect(top_x, top_y, bottom_x, bottom_y)
-			lock1_rectzoom = pygame.Rect(top_x, top_y, bottom_x, bottom_y)
 
 			if(event.type == pygame.MOUSEBUTTONDOWN and event.button == 1):
 				pos = self.position.copy()
@@ -46,7 +48,7 @@ class Controller:
 										
 					self.view5 = pygame.display.set_mode((self.width, self.height))
 
-				if puzzle1_rect.collidepoint(event.pos):
+				if puzzle1_rect.collidepoint(event.pos): 
 					#"zoom" in	
 					self.view6 = pygame.display.set_mode((self.width, self.height))
 			
