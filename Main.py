@@ -14,7 +14,7 @@ class Controller:
 		self.screen = pygame.display.set_mode((self.width, self.height))
 
 		self.tl_button = button.Button(1, [], (578,382), (93,61), 0, 3)
-		self.tr_button = button.Button(2, [], (783,380), (118,67), 1, 3)
+		self.tr_button = button.Button(2, [],, 3)
 		self.bl_button = button.Button(3, [], (163,445), (130,108), 2, 3)
 		self.br_button = button.Button(4, [], (431,472), (190,130), 3, 3)
 		self.monitor_puzzle = puzzle.Puzzle(1, (0,0), (0,0), [self.tl_button,self.tr_button,self.bl_button,self.br_button])
@@ -70,7 +70,7 @@ class Controller:
 								self.screen.blit((self.background), [0,0])
 
 					for puzzle in self.currentView.puzzlelist:
-						if pygame.Rect(puzzle.top_x, puzzle.top_y, puzzle.width, puzzle.height).collidepoint(event.pos):
+						if pygame.Rect(puzzle.top_x, puzzle.top_y, 1200, 800).collidepoint(event.pos):
 							# need to pull up the smaller view
 							# self.background = pygame.image.load(SMALLERVIEW.background).convert()
 							# self.background = pygame.transform.scale(self.background, (self.width, self.height))
@@ -79,10 +79,10 @@ class Controller:
 
 							for button in puzzle.buttonlist:
 								if pygame.Rect(button.top_x, button.top_y, button.width, button.height).collidepoint(event.pos):
-									button.clickNum += 1
+									button.clicked()
 									if puzzle.isComplete():
-										if puzzle == puzzle1:
-											print('cool')
+										if puzzle == self.monitor_puzzle:
+											print("cool")
 										# give the specific reward for the rest of the game
 
 					for key in self.currentView.keylist:

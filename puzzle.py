@@ -8,7 +8,7 @@ class Puzzle:
 		self.buttonlist = buttonlist
 
 	def isComplete(self):
-		for button in buttonlist:
+		for button in self.buttonlist:
 			if button.isCorrect() == False:
 				return False
 		return True
