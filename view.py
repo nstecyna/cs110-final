@@ -1,6 +1,6 @@
 import pygame
 
-class View
+class View:
 	def __init__(self, index, background, puzzlelist, keylist, locklist):
 		self.id = index
 		self.background = background

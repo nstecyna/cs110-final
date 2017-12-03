@@ -1,4 +1,4 @@
-class Key
+class Key:
 	def __init__(self, index, coordinates, images):
 		self.id = index
 		self.imagelist = images # first one will be keychain, second will be the one to put on the screen

@@ -5,7 +5,7 @@ class Button:
 		self.maxNum = 4
 	
 	def clicked(self):
-		if self.clickNum = maxNum:
+		if self.clickNum == maxNum:
 			self.clickNum = 0
 		else:
 			self.clickNum += 1
