@@ -1,7 +1,7 @@
 import pygame
 
 class View:
-	def __init__(self, index, background, coordinates, size, viewlist, puzzlelist, keylist, locklist):
+	def __init__(self, index, background, coordinates, size, viewlist, puzzlelist, keylist, locklist, notelist):
 		self.id = index
 		self.background = background
 		self.top_x = coordinates[0]
@@ -12,3 +12,4 @@ class View:
 		self.puzzlelist = puzzlelist
 		self.keylist = keylist
 		self.locklist = locklist
+		self.notelist = notelist

@@ -16,7 +16,10 @@ class Controller:
 		# Ask Colin: Do all of the button variables need to be "self", and will it give points off?
 
 		# Notes
-
+		self.steven_note = note.Note(1, 'FirstNoteSteven.png', (0,0), (0,0))
+		self.garbage_note = note.Note(2, 'ColinNote.png', (0,0), (0,0))
+		self.cabinet_note = note.Note(2, 'ColinNote2.png', (0,0), (0,0))
+		self.cypher_note = note.Note(2, 'ColinNote3.png', (0,0), (0,0))
 
 		# Monitor Puzzle
 		self.tl_monitor = button.Button(1, ['images/buttons/monitors/Blue4.png','images/buttons/monitors/Green4.png','images/buttons/monitors/Red4.png','images/buttons/monitors/Yellow4.png'], (578,382), (93,61), 2, 3)
@@ -73,30 +76,30 @@ class Controller:
 
 		# smaller views
 		# view1 smaller views
-		self.plugs_view = view.View(100, 'images/Plugs.png', (0,0), (0,0), [], [], [], [])
-		self.frontlab_view = view.View(100, 'images/Plugs.png', (0,0), (0,0), [], [], [], [])
+		self.plugs_view = view.View(100, 'images/Plugs.png', (0,0), (0,0), [], [], [], [], [])
+		self.frontlab_view = view.View(100, 'images/Plugs.png', (0,0), (0,0), [], [], [], [], [])
 
 
 		# view2 smaller views
-		self.computer_wires_view = view.View(6, '', (0,0), (0,0), [], [], [self.cabinet_key], [self.wires])
-		self.computer_side_view = view.View(5, '', (0,0), (0,0), [self.computer_wires_view], [], [], [])
+		self.computer_wires_view = view.View(6, '', (0,0), (0,0), [], [], [self.cabinet_key], [self.wires], [])
+		self.computer_side_view = view.View(5, '', (0,0), (0,0), [self.computer_wires_view], [], [], [], [])
 
 
 		# view3 smaller views
-		self.garbage_view = view.View(7, '', (0,0), (0,0), [], [], [], [])
-		self.printer_monitor_view = view.View(8, '', (0,0), (0,0), [], [self.printer_puzzle], [], [])
-		self.printer_view = view.View(9, '', (0,0), (0,0), [], [], [self.scissors], [])
-		self.cabinet_view = view.View(10, 'images/closedcabinet.jpg', (0,0), (0,0), [], [], [], [self.cabinet])
+		self.garbage_view = view.View(7, '', (0,0), (0,0), [], [], [], [], [self.garbage_note])
+		self.printer_monitor_view = view.View(8, '', (0,0), (0,0), [], [self.printer_puzzle], [], [], [])
+		self.printer_view = view.View(9, '', (0,0), (0,0), [], [], [self.scissors], [], [])
+		self.cabinet_view = view.View(10, 'images/closedcabinet.jpg', (0,0), (0,0), [], [], [], [self.cabinet], [self.cabinet_note])
 
 		# view4 smaller views
 
 
 
 		# main views
-		self.view1 = view.View(1, 'images/lab1.png', (0,0), (0,0), [], [self.monitor_puzzle], [], [])
-		self.view2 = view.View(2, 'images/lab2.jpg', (0,0), (0,0), [], [], [], [])
-		self.view3 = view.View(3, 'images/lab3.jpg', (0,0), (0,0), [self.garbage_view,self.printer_monitor_view,self.printer_view], [], [], [])
-		self.view4 = view.View(4, 'images/lab4.jpg', (0,0), (0,0), [], [], [], [])
+		self.view1 = view.View(1, 'images/lab1.png', (0,0), (0,0), [], [self.monitor_puzzle], [], [], [self.steven_note])
+		self.view2 = view.View(2, 'images/lab2.jpg', (0,0), (0,0), [], [], [], [], [])
+		self.view3 = view.View(3, 'images/lab3.jpg', (0,0), (0,0), [self.garbage_view,self.printer_monitor_view,self.printer_view], [], [], [], [])
+		self.view4 = view.View(4, 'images/lab4.jpg', (0,0), (0,0), [], [], [], [], [])
 
 
 		self.background = pygame.image.load(self.view1.background) # setting the window/display
