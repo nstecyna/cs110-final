@@ -10,7 +10,4 @@ class Lock:
 
 	def isUnlocked(self):
 		self.locked = False
-		self.top_x = 0
-		self.top_y = 0
-		self.bottom_x = 0
-		self.bottom_y = 0
+		self.top_x, self.top_y, self.bottom_x, self.bottom_y = 0
