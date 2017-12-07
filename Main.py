@@ -17,10 +17,10 @@ class Controller:
 		# Ask Colin: Do all of the button variables need to be "self", and will it give points off?
 
 		# Notes
-		self.steven_note = note.Note(1, 'FirstNoteSteven.png', (0,0), (0,0))
-		self.garbage_note = note.Note(2, 'ColinNote.png', (0,0), (0,0))
-		self.cabinet_note = note.Note(2, 'ColinNote2.png', (0,0), (0,0))
-		self.cypher_note = note.Note(2, 'ColinNote3.png', (0,0), (0,0))
+		self.steven_note = note.Note(1, 'images/notes/FirstNoteSteven.png', (580,637), (119,75))
+		self.garbage_note = note.Note(2, 'images/notes/ColinNote.png', (0,0), (0,0))
+		self.cabinet_note = note.Note(2, 'images/notes/ColinNote2.png', (0,0), (0,0))
+		self.cypher_note = note.Note(2, 'images/notes/ColinNote3.png', (0,0), (0,0))
 
 		# Monitor Puzzle
 		self.tl_monitor = button.Button(1, ['images/buttons/monitors/Blue4.png','images/buttons/monitors/Green4.png','images/buttons/monitors/Red4.png','images/buttons/monitors/Yellow4.png'], (578,382), (93,61), 2, 3)
@@ -35,28 +35,28 @@ class Controller:
 		self.printer_shapeP = button.Button(3, ['images/buttons/printer/pRec.png','images/buttons/printer/pTri.png','images/buttons/printer/pCir.png','images/buttons/printer/pPent.png'], (696,149), (47,40), 2, 3)
 		self.printer_shapeY = button.Button(4, ['images/buttons/printer/yRec.png','images/buttons/printer/yTri.png','images/buttons/printer/yCir.png','images/buttons/printer/yPent.png'], (754,153), (47,40), 3, 3)
 		self.printer_puzzle = puzzle.Puzzle(2, [self.printer_shapeB,self.printer_shapeG,self.printer_shapeP,self.printer_shapeY])
-		self.scissors = key.Key(1, [], (0,0), (0,0)) # rewarded key
+		self.scissors = key.Key(1, ['images/Scissors.png', ''], (0,0), (0,0)) # rewarded key
 
 		self.wires = lock.Lock(1, [], (0,0), (0,0)) # wires to be cut by scissors
-		self.cabinet_key = key.Key(2, [], (0,0), (0,0)) # key to be taken from behing the wires
+		self.cabinet_key = key.Key(2, ['images/NormalKey.jpg', ''], (0,0), (0,0)) # key to be taken from behing the wires
 
 		self.cabinet = lock.Lock(2, [], (0,0), (0,0)) # locked cabinet
 
 		# Telephone Puzzle
-		self.phone1 = button.Button(1, [], (0,0), (0,0), 1, 0)
-		self.phone2 = button.Button(2, [], (0,0), (0,0), 1, 0)
-		self.phone3 = button.Button(3, [], (0,0), (0,0), 1, 0)
-		self.phone4 = button.Button(4, [], (0,0), (0,0), 1, 0)
-		self.phone5 = button.Button(5, [], (0,0), (0,0), 1, 0)
-		self.phone6 = button.Button(6, [], (0,0), (0,0), 1, 0)
-		self.phone7 = button.Button(7, [], (0,0), (0,0), 1, 0)
-		self.phone8 = button.Button(8, [], (0,0), (0,0), 1, 0)
-		self.phone9 = button.Button(9, [], (0,0), (0,0), 1, 0)
+		self.phone1 = button.Button(1, [], (527,345), (58,48), 1, 0)
+		self.phone2 = button.Button(2, [], (603,345), (55,48), 1, 0)
+		self.phone3 = button.Button(3, [], (673,345), (59,47), 1, 0)
+		self.phone4 = button.Button(4, [], (529,409), (58,45), 1, 0)
+		self.phone5 = button.Button(5, [], (604,409), (52,43), 1, 0)
+		self.phone6 = button.Button(6, [], (678,408), (48,43), 1, 0)
+		self.phone7 = button.Button(7, [], (532,470), (52,43), 1, 0)
+		self.phone8 = button.Button(8, [], (602,469), (54,40), 1, 0)
+		self.phone9 = button.Button(9, [], (674,467), (49,42), 1, 0)
 		self.telephone_puzzle = puzzle.Puzzle(3, [self.phone1,self.phone2,self.phone3,self.phone4,self.phone5,self.phone6,self.phone7,self.phone8,self.phone9], '348825')
 
 		# Projector Puzzle
 		self.youngersteven_button = button.Button(1, [], (0,0), (0,0), 1, 0)
-		self.anthony_button = button.Button(2, [], (0,0), (0,0), 1, 0)
+		self.eileen_button = button.Button(2, [], (0,0), (0,0), 1, 0)
 		self.shania_button = button.Button(3, [], (0,0), (0,0), 1, 0)
 		self.melanie_button = button.Button(4, [], (0,0), (0,0), 1, 0)
 		self.colin_button = button.Button(5, [], (0,0), (0,0), 1, 0)
@@ -70,14 +70,14 @@ class Controller:
 		self.safe_combo5 = button.Button(5, ['images/buttons/safe/1E.png','images/buttons/safe/2E.png','images/buttons/safe/3E.png','images/buttons/safe/4E.png','images/buttons/safe/5E.png','images/buttons/safe/6E.png','images/buttons/safe/7E.png','images/buttons/safe/8E.png','images/buttons/safe/9E.png'], (769,328), (109,143), 0, 8)
 		self.safe_combo6 = button.Button(6, ['images/buttons/safe/1F.png','images/buttons/safe/2F.png','images/buttons/safe/3F.png','images/buttons/safe/4F.png','images/buttons/safe/5F.png','images/buttons/safe/6F.png','images/buttons/safe/7F.png','images/buttons/safe/8F.png','images/buttons/safe/9F.png'], (918,328), (109,143), 5, 8)
 		self.safe_puzzle = puzzle.Puzzle(5, [self.safe_combo1,self.safe_combo2,self.safe_combo3,self.safe_combo4,self.safe_combo5,self.safe_combo6])
-		self.blue_key = key.Key(3, ['', 'images/OpenSafeNoKey.png'], (558,624), (125,51))
+		self.blue_key = key.Key(3, ['images/ElderKey.png', 'images/OpenSafeNoKey.png'], (558,624), (125,51))
 
 		self.blue_door = lock.Lock(3, [], (0,0), (0,0)) # exit
 
 
 		# smaller views
 		# view1 smaller views
-		self.plugs_view = view.View(100, 'images/Plugs.png', (0,0), (0,0), [], [], [], [], [])
+		self.plugs_view = view.View(100, 'images/Plugs.png', (122,435), (38,36), [], [], [], [], [])
 		self.projector_view = view.View(100, 'images/Projector.png', (0,0), (0,0), [], [self.projector_puzzle], [], [], [])
 		self.telephone_view = view.View(100, 'images/Phone.png', (0,0), (0,0), [], [self.telephone_puzzle], [], [], [])
 		self.frontlab_view = view.View(100, 'images/frontlab.png', (0,0), (0,0), [self.projector_view], [], [], [], [])
@@ -87,7 +87,7 @@ class Controller:
 
 		# view2 smaller views
 		self.computer_wires_view = view.View(6, '', (0,0), (0,0), [], [], [self.cabinet_key], [self.wires], [])
-		self.computer_side_view = view.View(5, '', (0,0), (0,0), [self.computer_wires_view], [], [], [], [])
+		self.computer_side_view = view.View(100, '', (0,0), (0,0), [self.computer_wires_view], [], [], [], [])
 		self.safe_view = view.View(5, 'images/ClosedSafe.png', (72,371), (60,69), [], [self.safe_puzzle], [self.blue_key], [], [])
 
 
@@ -113,6 +113,9 @@ class Controller:
 		self.currentView = self.view1 # how to tell which view we're using
 		self.viewlist = [self.view1, self.view2, self.view3, self.view4, self.safe_view] # creates a list with the first four views,
 		# to use when turning left or right
+		self.pastviewlist = []
+
+		self.keylist = [] # used to display the image of the keys on the top of screen
 
 		self.rightside_rect = pygame.Rect(1100, 0, 100, 800)
 		self.leftside_rect = pygame.Rect(0, 0, 100, 800)
@@ -120,6 +123,7 @@ class Controller:
 		self.gameComplete = False
 
 		self.screen.blit((self.background), [0,0]) # creating the screen using the background image
+		self.screen.blit((pygame.image.load(self.steven_note.image)), [0,0])
 
 		pygame.display.update()
 
@@ -142,6 +146,7 @@ class Controller:
 						# we're just going to make it so that the key has its real coordinates after it is active
 						if pygame.Rect(key.top_x, key.top_y, key.width, key.height).collidepoint(event.pos):
 							key.isTaken()
+							self.keylist.append(key)
 							for view in self.viewlist:
 								if (key.id == 1 and view.id == '''''') or (key.id == 2 and view.id == '''''') or (key.id == 3 and view.id == 5):
 									view.background = key.imagelist[1]
@@ -149,25 +154,42 @@ class Controller:
 						for lock in self.currentView.keylist:
 							if pygame.Rect(key.top_x, key.top_y, key.width, key.height).collidepoint(event.pos) and (lock.id == key.id):
 								lock.isUnlocked()
-								if (lock.id == 1 and view.id == '''''') or (lock.id == 2 and view.id == '''''') or (lock.id == 3 and view.id == ''''''):
-									view.background = key.imagelist[1]
+								for view in self.viewlist:
+									if (lock.id == 1 and view.id == '''''') or (lock.id == 2 and view.id == '''''') or (lock.id == 3 and view.id == ''''''):
+										view.background = lock.image
 
 					viewChanged = False
 					# changes the view left or right
 					if self.rightside_rect.collidepoint(event.pos):
-						for view in reversed(self.viewlist[:3]): # only the first four views
-							if ((view.id == self.currentView.id + 1) or (view.id == 1 and self.currentView.id == 4)) and not viewChanged:
-								self.currentView = view
-								viewChanged = True
+						if len(self.pastviewlist): # if we have a past view
+							pastview = self.pastviewlist.pop()
+							for view in self.viewlist:
+								if view.id == pastview:
+									self.currentView = view
+									viewChanged = True
+						else:
+							for view in reversed(self.viewlist[:4]): # only the first four views
+								if ((view.id == self.currentView.id + 1) or (view.id == 1 and self.currentView.id == 4)) and not viewChanged:
+									self.currentView = view
+									viewChanged = True
 					elif self.leftside_rect.collidepoint(event.pos):
-						for view in self.viewlist[:4]: # only the first four views
-							if ((view.id == self.currentView.id - 1) or (view.id == 4 and self.currentView.id == 1)) and not viewChanged:
-								self.currentView = view
-								viewChanged = True
+						if len(self.pastviewlist): # if we have a past view
+							pastview = self.pastviewlist.pop()
+							for view in self.viewlist:
+								if view.id == pastview:
+									self.currentView = view
+									viewChanged = True
+						else:
+							for view in self.viewlist[:4]: # only the first four views
+								if ((view.id == self.currentView.id - 1) or (view.id == 4 and self.currentView.id == 1)) and not viewChanged:
+									self.currentView = view
+									viewChanged = True
 
 					for view in self.currentView.viewlist:
 						if pygame.Rect(view.top_x, view.top_y, view.width, view.height).collidepoint(event.pos):
+							self.pastviewlist.append(self.currentView.id)
 							self.currentView = view
+
 
 					self.background = pygame.image.load(self.currentView.background)
 					self.background = pygame.transform.scale(self.background, (self.width, self.height))
@@ -198,12 +220,17 @@ class Controller:
 							if (button.image != ''):
 								self.screen.blit(pygame.image.load(button.image), [0,0])
 
-					for key infor key in self.currentView.keylist:
+					for key in self.keylist:
 						# want to have the key on the top of the screen now
-						#if key.taken:
-						#	self.screen.blit((pygame.image.load(key.imagelist[0])), [0,0])
+							self.screen.blit((pygame.image.load(key.imagelist[0])), [0,0])
+					print(self.pastviewlist)
+
+					for note in self.currentView.notelist:
+						if pygame.Rect(note.top_x, note.top_y, note.width, note.height).collidepoint(event.pos):
+							self.screen.blit((pygame.image.load(note.image)), [0,0])
 
 					pygame.display.update()
+
 
 
 def main():
