@@ -5,4 +5,4 @@ class Note:
 		self.top_x = coordinates[0]
 		self.top_y = coordinates[1]
 		self.width = size[0]
-		self.weight = size[1]
+		self.height = size[1]

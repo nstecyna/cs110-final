@@ -22,3 +22,10 @@ class Button:
 
 	def isCorrect(self):
 		return self.clickNum == self.correctNum
+
+	def isRemoved(self):
+		self.top_x = 0
+		self.top_y = 0
+		self.width = 0
+		self.height = 0
+		self.image = ''
