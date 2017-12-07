@@ -72,7 +72,7 @@ class Controller:
 		self.safe_puzzle = puzzle.Puzzle(5, [self.safe_combo1,self.safe_combo2,self.safe_combo3,self.safe_combo4,self.safe_combo5,self.safe_combo6])
 		self.blue_key = key.Key(3, ['images/ElderKey.png', 'images/OpenSafeNoKey.png'], (558,624), (125,51))
 
-		self.blue_door = lock.Lock(3, 'images/OpenDoor.png', (0,0), (0,0)) # exit
+		self.blue_door = lock.Lock(3, 'images/TheEnd.png', (0,0), (0,0)) # exit
 
 
 		# smaller views
