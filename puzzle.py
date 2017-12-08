@@ -24,7 +24,7 @@ class Puzzle:
 
 	def addsToOrder(self, button_num):
 		# accumulates the button pressed
-		self.order.append(button_num)
+		self.order += str(button_num)
 		if self.order not in self.partial_order:
 			# resets number
 			self.order = ''

@@ -18,7 +18,8 @@ class Button:
 			self.clickNum = 0
 		else:
 			self.clickNum += 1
-		self.image = self.imagelist[self.clickNum]
+		if len(self.imagelist): # if the list has values (if it's not a certain order puzzle)
+			self.image = self.imagelist[self.clickNum]
 
 	def isCorrect(self):
 		return self.clickNum == self.correctNum
