@@ -17,102 +17,103 @@ class Controller:
 		# Ask Colin: Do all of the button variables need to be "self", and will it give points off?
 
 		# Notes
-		self.steven_note = note.Note(1, 'images/notes/FirstNoteSteven.png', (580,637), (119,75))
-		self.garbage_note = note.Note(2, 'images/notes/ColinNote.png', (507,259), (185,99))
-		self.cabinet_note = note.Note(2, 'images/notes/ColinNote2.png', (0,0), (0,0))
-		self.cypher_note = note.Note(2, 'images/notes/ColinNote3.png', (512,644), (114,83))
+		steven_note = note.Note(1, 'images/notes/FirstNoteSteven.png', (580,637), (119,75))
+		garbage_note = note.Note(2, 'images/notes/ColinNote.png', (507,259), (185,99))
+		cabinet_note = note.Note(2, 'images/notes/ColinNote2.png', (0,0), (0,0))
+		cypher_note = note.Note(2, 'images/notes/ColinNote3.png', (512,644), (114,83))
 
 		# Monitor Puzzle
-		self.tl_monitor = button.Button(1, ['images/buttons/monitors/Blue4.png','images/buttons/monitors/Green4.png','images/buttons/monitors/Red4.png','images/buttons/monitors/Yellow4.png'], (578,382), (93,61), 2, 3)
-		self.tr_monitor = button.Button(2, ['images/buttons/monitors/Blue3.png','images/buttons/monitors/Green3.png','images/buttons/monitors/Red3.png','images/buttons/monitors/Yellow3.png'], (783,380), (118,67), 0, 3)
-		self.bl_monitor = button.Button(3, ['images/buttons/monitors/Blue2.png','images/buttons/monitors/Green2.png','images/buttons/monitors/Red2.png','images/buttons/monitors/Yellow2.png'], (163,445), (130,108), 1, 3)
-		self.br_monitor = button.Button(4, ['images/buttons/monitors/Blue1.png','images/buttons/monitors/Green1.png','images/buttons/monitors/Red1.png','images/buttons/monitors/Yellow1.png'], (431,472), (190,130), 3, 3)
-		self.monitor_puzzle = puzzle.Puzzle(1, [self.tl_monitor,self.tr_monitor,self.bl_monitor,self.br_monitor])
+		tl_monitor = button.Button(1, ['images/buttons/monitors/Blue4.png','images/buttons/monitors/Green4.png','images/buttons/monitors/Red4.png','images/buttons/monitors/Yellow4.png'], (578,382), (93,61), 2, 3)
+		tr_monitor = button.Button(2, ['images/buttons/monitors/Blue3.png','images/buttons/monitors/Green3.png','images/buttons/monitors/Red3.png','images/buttons/monitors/Yellow3.png'], (783,380), (118,67), 0, 3)
+		bl_monitor = button.Button(3, ['images/buttons/monitors/Blue2.png','images/buttons/monitors/Green2.png','images/buttons/monitors/Red2.png','images/buttons/monitors/Yellow2.png'], (163,445), (130,108), 1, 3)
+		br_monitor = button.Button(4, ['images/buttons/monitors/Blue1.png','images/buttons/monitors/Green1.png','images/buttons/monitors/Red1.png','images/buttons/monitors/Yellow1.png'], (431,472), (190,130), 3, 3)
+		monitor_puzzle = puzzle.Puzzle(1, [tl_monitor,tr_monitor,bl_monitor,br_monitor])
 
 		# Printer Puzzle
-		self.printer_shapeB = button.Button(1, ['images/buttons/printer/gRec.png','images/buttons/printer/gTri.png','images/buttons/printer/gCir.png','images/buttons/printer/gPent.png'], (569,142), (47,40), 2, 3)
-		self.printer_shapeG = button.Button(2, ['images/buttons/printer/bRec.png','images/buttons/printer/bTri.png','images/buttons/printer/bCir.png','images/buttons/printer/bPent.png'], (635,149), (47,40), 1, 3)
-		self.printer_shapeP = button.Button(3, ['images/buttons/printer/pRec.png','images/buttons/printer/pTri.png','images/buttons/printer/pCir.png','images/buttons/printer/pPent.png'], (696,149), (47,40), 2, 3)
-		self.printer_shapeY = button.Button(4, ['images/buttons/printer/yRec.png','images/buttons/printer/yTri.png','images/buttons/printer/yCir.png','images/buttons/printer/yPent.png'], (754,153), (47,40), 3, 3)
-		self.printer_puzzle = puzzle.Puzzle(2, [self.printer_shapeB,self.printer_shapeG,self.printer_shapeP,self.printer_shapeY])
-		self.scissors = key.Key(1, ['images/Scissors.png', 'images/PrinterNoScissors.png'], (0,0), (0,0)) # rewarded key
+		printer_shapeB = button.Button(1, ['images/buttons/printer/gRec.png','images/buttons/printer/gTri.png','images/buttons/printer/gCir.png','images/buttons/printer/gPent.png'], (569,142), (47,40), 2, 3)
+		printer_shapeG = button.Button(2, ['images/buttons/printer/bRec.png','images/buttons/printer/bTri.png','images/buttons/printer/bCir.png','images/buttons/printer/bPent.png'], (635,149), (47,40), 1, 3)
+		printer_shapeP = button.Button(3, ['images/buttons/printer/pRec.png','images/buttons/printer/pTri.png','images/buttons/printer/pCir.png','images/buttons/printer/pPent.png'], (696,149), (47,40), 2, 3)
+		printer_shapeY = button.Button(4, ['images/buttons/printer/yRec.png','images/buttons/printer/yTri.png','images/buttons/printer/yCir.png','images/buttons/printer/yPent.png'], (754,153), (47,40), 3, 3)
+		printer_puzzle = puzzle.Puzzle(2, [printer_shapeB,printer_shapeG,printer_shapeP,printer_shapeY])
+		scissors = key.Key(1, ['images/Scissors.png', 'images/PrinterNoScissors.png'], (0,0), (0,0)) # rewarded key
 
-		self.wires = lock.Lock(1, 'images/UnderComputerNoWires.png', (517,463), (90,35)) # wires to be cut by scissors
-		self.cabinet_key = key.Key(2, ['images/NormalKey.png', 'images/UnderComputerEmpty.png'], (0,0), (0,0)) # key to be taken from behing the wires
+		wires = lock.Lock(1, 'images/UnderComputerNoWires.png', (517,463), (90,35)) # wires to be cut by scissors
+		cabinet_key = key.Key(2, ['images/NormalKey.png', 'images/UnderComputerEmpty.png'], (0,0), (0,0)) # key to be taken from behing the wires
 
-		self.cabinet = lock.Lock(2, 'images/OpenCabinet.png', (492,99), (130,221)) # locked cabinet
+		cabinet = lock.Lock(2, 'images/OpenCabinet.png', (492,99), (130,221)) # locked cabinet
 
 		# Telephone Puzzle
-		self.phone1 = button.Button(1, [], (527,345), (56,48), 1, 0)
-		self.phone2 = button.Button(2, [], (603,345), (55,48), 1, 0)
-		self.phone3 = button.Button(3, [], (673,345), (59,47), 1, 0)
-		self.phone4 = button.Button(4, [], (529,409), (58,45), 1, 0)
-		self.phone5 = button.Button(5, [], (604,409), (52,43), 1, 0)
-		self.phone6 = button.Button(6, [], (678,408), (48,43), 1, 0)
-		self.phone7 = button.Button(7, [], (532,470), (52,43), 1, 0)
-		self.phone8 = button.Button(8, [], (602,469), (54,40), 1, 0)
-		self.phone9 = button.Button(9, [], (674,467), (49,42), 1, 0)
-		self.telephone_puzzle = puzzle.Puzzle(3, [self.phone1,self.phone2,self.phone3,self.phone4,self.phone5,self.phone6,self.phone7,self.phone8,self.phone9], '348825')
+		phone1 = button.Button(1, [], (527,345), (56,48), 1, 0)
+		phone2 = button.Button(2, [], (603,345), (55,48), 1, 0)
+		phone3 = button.Button(3, [], (673,345), (59,47), 1, 0)
+		phone4 = button.Button(4, [], (529,409), (58,45), 1, 0)
+		phone5 = button.Button(5, [], (604,409), (52,43), 1, 0)
+		phone6 = button.Button(6, [], (678,408), (48,43), 1, 0)
+		phone7 = button.Button(7, [], (532,470), (52,43), 1, 0)
+		phone8 = button.Button(8, [], (602,469), (54,40), 1, 0)
+		phone9 = button.Button(9, [], (674,467), (49,42), 1, 0)
+		telephone_puzzle = puzzle.Puzzle(3, [phone1,phone2,phone3,phone4,phone5,phone6,phone7,phone8,phone9], '348825')
 
 		# Projector Puzzle
-		self.youngersteven_button = button.Button(1, [], (491,361), (56,48), 1, 0)
-		self.eileen_button = button.Button(2, [], (551,361), (51,48), 1, 0)
-		self.shania_button = button.Button(3, [], (607,360), (49,48), 1, 0)
-		self.melanie_button = button.Button(4, [], (497,431), (51,45), 1, 0)
-		self.colin_button = button.Button(5, [], (554,432), (51,43), 1, 0)
-		self.youngsteven_button = button.Button(6, [], (609,430), (51,45), 1, 0)
-		self.projector_puzzle = puzzle.Puzzle(4, [self.youngersteven_button,self.eileen_button,self.shania_button,self.melanie_button,self.colin_button,self.youngsteven_button], '36142')
+		youngersteven_button = button.Button(1, [], (491,361), (56,48), 1, 0)
+		eileen_button = button.Button(2, [], (551,361), (51,48), 1, 0)
+		shania_button = button.Button(3, [], (607,360), (49,48), 1, 0)
+		melanie_button = button.Button(4, [], (497,431), (51,45), 1, 0)
+		colin_button = button.Button(5, [], (554,432), (51,43), 1, 0)
+		youngsteven_button = button.Button(6, [], (609,430), (51,45), 1, 0)
+		projector_puzzle = puzzle.Puzzle(4, [youngersteven_button,eileen_button,shania_button,melanie_button,colin_button,youngsteven_button], '36142')
 
-		self.safe_combo1 = button.Button(1, ['images/buttons/safe/1A.png','images/buttons/safe/2A.png','images/buttons/safe/3A.png','images/buttons/safe/4A.png','images/buttons/safe/5A.png','images/buttons/safe/6A.png','images/buttons/safe/7A.png','images/buttons/safe/8A.png','images/buttons/safe/9A.png'], (163,328), (109,143), 6, 8)
-		self.safe_combo2 = button.Button(2, ['images/buttons/safe/1B.png','images/buttons/safe/2B.png','images/buttons/safe/3B.png','images/buttons/safe/4B.png','images/buttons/safe/5B.png','images/buttons/safe/6B.png','images/buttons/safe/7B.png','images/buttons/safe/8B.png','images/buttons/safe/9B.png'], (313,328), (109,143), 2, 8)
-		self.safe_combo3 = button.Button(3, ['images/buttons/safe/1C.png','images/buttons/safe/2C.png','images/buttons/safe/3C.png','images/buttons/safe/4C.png','images/buttons/safe/5C.png','images/buttons/safe/6C.png','images/buttons/safe/7C.png','images/buttons/safe/8C.png','images/buttons/safe/9C.png'], (463,328), (109,143), 3, 8)
-		self.safe_combo4 = button.Button(4, ['images/buttons/safe/1D.png','images/buttons/safe/2D.png','images/buttons/safe/3D.png','images/buttons/safe/4D.png','images/buttons/safe/5D.png','images/buttons/safe/6D.png','images/buttons/safe/7D.png','images/buttons/safe/8D.png','images/buttons/safe/9D.png'], (618,328), (109,143), 1, 8)
-		self.safe_combo5 = button.Button(5, ['images/buttons/safe/1E.png','images/buttons/safe/2E.png','images/buttons/safe/3E.png','images/buttons/safe/4E.png','images/buttons/safe/5E.png','images/buttons/safe/6E.png','images/buttons/safe/7E.png','images/buttons/safe/8E.png','images/buttons/safe/9E.png'], (769,328), (109,143), 0, 8)
-		self.safe_combo6 = button.Button(6, ['images/buttons/safe/1F.png','images/buttons/safe/2F.png','images/buttons/safe/3F.png','images/buttons/safe/4F.png','images/buttons/safe/5F.png','images/buttons/safe/6F.png','images/buttons/safe/7F.png','images/buttons/safe/8F.png','images/buttons/safe/9F.png'], (918,328), (109,143), 5, 8)
-		self.safe_puzzle = puzzle.Puzzle(5, [self.safe_combo1,self.safe_combo2,self.safe_combo3,self.safe_combo4,self.safe_combo5,self.safe_combo6])
-		self.blue_key = key.Key(3, ['images/ElderKey.png', 'images/OpenSafeNoKey.png'], (0,0), (0,0))
+		safe_combo1 = button.Button(1, ['images/buttons/safe/1A.png','images/buttons/safe/2A.png','images/buttons/safe/3A.png','images/buttons/safe/4A.png','images/buttons/safe/5A.png','images/buttons/safe/6A.png','images/buttons/safe/7A.png','images/buttons/safe/8A.png','images/buttons/safe/9A.png'], (163,328), (109,143), 6, 8)
+		safe_combo2 = button.Button(2, ['images/buttons/safe/1B.png','images/buttons/safe/2B.png','images/buttons/safe/3B.png','images/buttons/safe/4B.png','images/buttons/safe/5B.png','images/buttons/safe/6B.png','images/buttons/safe/7B.png','images/buttons/safe/8B.png','images/buttons/safe/9B.png'], (313,328), (109,143), 2, 8)
+		safe_combo3 = button.Button(3, ['images/buttons/safe/1C.png','images/buttons/safe/2C.png','images/buttons/safe/3C.png','images/buttons/safe/4C.png','images/buttons/safe/5C.png','images/buttons/safe/6C.png','images/buttons/safe/7C.png','images/buttons/safe/8C.png','images/buttons/safe/9C.png'], (463,328), (109,143), 3, 8)
+		safe_combo4 = button.Button(4, ['images/buttons/safe/1D.png','images/buttons/safe/2D.png','images/buttons/safe/3D.png','images/buttons/safe/4D.png','images/buttons/safe/5D.png','images/buttons/safe/6D.png','images/buttons/safe/7D.png','images/buttons/safe/8D.png','images/buttons/safe/9D.png'], (618,328), (109,143), 1, 8)
+		safe_combo5 = button.Button(5, ['images/buttons/safe/1E.png','images/buttons/safe/2E.png','images/buttons/safe/3E.png','images/buttons/safe/4E.png','images/buttons/safe/5E.png','images/buttons/safe/6E.png','images/buttons/safe/7E.png','images/buttons/safe/8E.png','images/buttons/safe/9E.png'], (769,328), (109,143), 0, 8)
+		safe_combo6 = button.Button(6, ['images/buttons/safe/1F.png','images/buttons/safe/2F.png','images/buttons/safe/3F.png','images/buttons/safe/4F.png','images/buttons/safe/5F.png','images/buttons/safe/6F.png','images/buttons/safe/7F.png','images/buttons/safe/8F.png','images/buttons/safe/9F.png'], (918,328), (109,143), 5, 8)
+		safe_puzzle = puzzle.Puzzle(5, [safe_combo1,safe_combo2,safe_combo3,safe_combo4,safe_combo5,safe_combo6])
+		blue_key = key.Key(3, ['images/ElderKey.png', 'images/OpenSafeNoKey.png'], (0,0), (0,0))
 
-		self.blue_door = lock.Lock(3, 'images/TheEnd.png', (295,0), (310,775)) # exit
+		blue_door = lock.Lock(3, 'images/TheEnd.png', (295,0), (310,775)) # exit
 
 
 		# smaller views
 		# view1 smaller views
-		self.plugs_view = view.View(4, 'images/Plugs.png', (122,435), (38,36), [], [], [], [], [])
-		self.projector_view = view.View(5, 'images/Projector.png', (776,506), (167,82), [], [self.projector_puzzle], [], [], [])
-		self.telephone_view = view.View(6, 'images/Phone.png', (421,239), (31,44), [], [self.telephone_puzzle], [], [], [])
-		self.frontlab_view = view.View(7, 'images/FrontLab.png', (480,150), (450,230), [self.telephone_view,self.projector_view], [], [], [], [])
-		self.whiteboard_view = view.View(8, 'images/Whiteboard.png', (930,156), (266,180), [], [], [], [], [])
+		plugs_view = view.View(4, 'images/Plugs.png', (122,435), (38,36), [], [], [], [], [])
+		projector_view = view.View(5, 'images/Projector.png', (776,506), (167,82), [], [projector_puzzle], [], [], [])
+		telephone_view = view.View(6, 'images/Phone.png', (421,239), (31,44), [], [telephone_puzzle], [], [], [])
+		frontlab_view = view.View(7, 'images/FrontLab.png', (480,150), (450,230), [telephone_view,projector_view], [], [], [], [])
+		whiteboard_view = view.View(8, 'images/Whiteboard.png', (930,156), (266,180), [], [], [], [], [])
 
 		# view2 smaller views
-		self.computer_wires_view = view.View(9, 'images/UnderComputer.png', (570,386), (742,552), [], [], [self.cabinet_key], [self.wires], [])
-		self.safe_view = view.View(10, 'images/ClosedSafe.png', (72,371), (60,69), [], [self.safe_puzzle], [self.blue_key], [], [])
+		computer_wires_view = view.View(9, 'images/UnderComputer.png', (570,386), (742,552), [], [], [cabinet_key], [wires], [])
+		safe_view = view.View(10, 'images/ClosedSafe.png', (72,371), (60,69), [], [safe_puzzle], [blue_key], [], [])
 
 		# view3 smaller views
-		self.garbage_view = view.View(11, 'images/Garbage.png', (834,460), (340,253), [], [], [], [], [self.garbage_note])
-		self.printer_monitor_view = view.View(12, 'images/monitor.png', (365,338), (173,166), [], [self.printer_puzzle], [], [self.scissors], [])
-		self.printer_view = view.View(13, 'images/Printer.png', (568,345), (214,148), [], [], [self.scissors], [], [])
-		self.cabinet_view = view.View(14, 'images/ClosedCabinet.png', (143,516), (366,264), [], [], [], [self.cabinet], [self.cabinet_note])
+		garbage_view = view.View(11, 'images/Garbage.png', (834,460), (340,253), [], [], [], [], [garbage_note])
+		printer_monitor_view = view.View(12, 'images/monitor.png', (365,338), (173,166), [], [printer_puzzle], [], [scissors], [])
+		printer_view = view.View(13, 'images/Printer.png', (568,345), (214,148), [], [], [scissors], [], [])
+		cabinet_view = view.View(14, 'images/ClosedCabinet.png', (143,516), (366,264), [], [], [], [cabinet], [cabinet_note])
 
 		# view4 smaller views
-		self.door_view = view.View(15, 'images/DoorWithLock.png', (265,110), (135,270), [], [], [], [self.blue_door], [])
+		door_view = view.View(15, 'images/DoorWithLock.png', (265,110), (135,270), [], [], [], [blue_door], [])
 
 		# main views
-		self.view1 = view.View(0, 'images/lab1.png', (0,0), (0,0), [self.plugs_view,self.frontlab_view,self.whiteboard_view], [self.monitor_puzzle], [], [], [self.steven_note])
-		self.view2 = view.View(1, 'images/lab2.png', (0,0), (0,0), [self.computer_wires_view,self.safe_view], [], [], [], [])
-		self.view3 = view.View(2, 'images/lab3.png', (0,0), (0,0), [self.garbage_view,self.printer_monitor_view,self.printer_view,self.cabinet_view], [], [], [], [])
-		self.view4 = view.View(3, 'images/lab4.png', (0,0), (0,0), [self.door_view], [], [], [], [self.cypher_note])
+		view1 = view.View(0, 'images/lab1.png', (0,0), (0,0), [plugs_view,frontlab_view,whiteboard_view], [monitor_puzzle], [], [], [steven_note])
+		view2 = view.View(1, 'images/lab2.png', (0,0), (0,0), [computer_wires_view,safe_view], [], [], [], [])
+		view3 = view.View(2, 'images/lab3.png', (0,0), (0,0), [garbage_view,printer_monitor_view,printer_view,cabinet_view], [], [], [], [])
+		view4 = view.View(3, 'images/lab4.png', (0,0), (0,0), [door_view], [], [], [], [cypher_note])
 
-		# setting the window/display
-		self.background = pygame.image.load(self.view1.background)
-		# resizing the image
-		self.background = pygame.transform.scale(self.background, (self.width, self.height))
-		# how to tell which view we're using
-		self.currentView = self.view1
+
 		# creates a list with the first four views to use when turning left or right
-		self.viewlist = [self.view1, self.view2, self.view3, self.view4,self.plugs_view,self.projector_view,self.telephone_view,self.frontlab_view,self.whiteboard_view,self.computer_wires_view,self.safe_view,self.garbage_view,self.printer_monitor_view,self.printer_view,self.cabinet_view,self.door_view]
-
+		self.viewlist = [view1, view2, view3, view4,plugs_view,projector_view,telephone_view,frontlab_view,whiteboard_view,computer_wires_view,safe_view,garbage_view,printer_monitor_view,printer_view,cabinet_view,door_view]
+		# how to tell which view we're using
+		self.currentView = self.viewlist[0]
 		# list used to keep track of past views
 		self.pastviewlist = []
+
+		# setting the window/display
+		self.background = pygame.image.load(self.currentView.background)
+		# resizing the image
+		self.background = pygame.transform.scale(self.background, (self.width, self.height))
 
 		# used to display the image of the keys on the top of screen
 		self.keylist = []
@@ -123,7 +124,7 @@ class Controller:
 		self.gameComplete = False
 
 		self.screen.blit((self.background), [0,0]) # creating the screen using the background image
-		self.screen.blit((pygame.image.load(self.steven_note.image)), [0,0]) # starts the game looking at steven's note
+		self.screen.blit((pygame.image.load(steven_note.image)), [0,0]) # starts the game looking at steven's note
 
 		pygame.display.update()
 
@@ -223,7 +224,7 @@ class Controller:
 									button.clicked()
 								# give the specific reward for the rest of the game
 								if puzzle.isComplete():
-									if puzzle == self.monitor_puzzle:
+									if puzzle.id == 1: # first puzzle (monitors)
 										self.viewlist[0].background = "images/lab1withshapes.png"
 										self.currentView = self.viewlist[0]
 										self.background = pygame.image.load(self.currentView.background)
@@ -231,7 +232,7 @@ class Controller:
 										for button in self.viewlist[0].puzzlelist[0].buttonlist:
 											button.isRemoved()
 
-									if puzzle == self.printer_puzzle:
+									if puzzle.id == 2: # second puzzle (printer)
 										self.viewlist[12].background = "images/PrinterError.png"
 										self.viewlist[13].background = "images/PrinterWithScissors.png"
 										self.viewlist[13].keylist[0].top_x = 365
@@ -244,7 +245,24 @@ class Controller:
 										for button in self.viewlist[12].puzzlelist[0].buttonlist:
 											button.isRemoved()
 
-									if puzzle == self.safe_puzzle:
+									if puzzle.id == 3: # third puzzle (telephone)
+										self.viewlist[6].background = "images/PhoneColin.png"
+										self.currentView = self.viewlist[6]
+										self.background = pygame.image.load(self.currentView.background)
+										self.screen.blit((self.background), [0,0])
+										for button in self.viewlist[6].puzzlelist[0].buttonlist:
+											button.isRemoved()
+
+									if puzzle.id == 4: # fourth puzzle (projector)
+										self.viewlist[5].background = "images/ProjectorOn.png"
+										self.viewlist[8].background = "images/Projection.png"
+										self.currentView = self.viewlist[5]
+										self.background = pygame.image.load(self.currentView.background)
+										self.screen.blit((self.background), [0,0])
+										for button in self.viewlist[5].puzzlelist[0].buttonlist:
+											button.isRemoved()
+
+									if puzzle.id == 5: # fifth puzzle (safe)
 										self.viewlist[10].background = "images/OpenSafeWithKey.png"
 										self.viewlist[10].keylist[0].top_x = 558
 										self.viewlist[10].keylist[0].top_y = 624
@@ -254,23 +272,6 @@ class Controller:
 										self.background = pygame.image.load(self.currentView.background)
 										self.screen.blit((self.background), [0,0])
 										for button in self.viewlist[10].puzzlelist[0].buttonlist:
-											button.isRemoved()
-
-									if puzzle == self.telephone_puzzle:
-										self.viewlist[6].background = "images/PhoneColin.png"
-										self.currentView = self.viewlist[6]
-										self.background = pygame.image.load(self.currentView.background)
-										self.screen.blit((self.background), [0,0])
-										for button in self.viewlist[6].puzzlelist[0].buttonlist:
-											button.isRemoved()
-
-									if puzzle == self.projector_puzzle:
-										self.viewlist[5].background = "images/ProjectorOn.png"
-										self.viewlist[8].background = "images/Projection.png"
-										self.currentView = self.viewlist[5]
-										self.background = pygame.image.load(self.currentView.background)
-										self.screen.blit((self.background), [0,0])
-										for button in self.viewlist[5].puzzlelist[0].buttonlist:
 											button.isRemoved()
 
 							if (button.image != ''):
