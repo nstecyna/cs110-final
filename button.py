@@ -1,5 +1,10 @@
 class Button:
 	def __init__(self, index, imagelist, coordinates, size, correctNum, maxNum):
+		"""
+		Creates button object, assigns an index value to it, takes image from image list, 
+		ParamList: self (self), index (int), imagelist (list), coordinates (tuple), size (list), correctNum (int), maxNum (int)
+		Returns: none
+		"""
 		self.id = index
 		self.imagelist = imagelist
 		self.image = ''
@@ -14,6 +19,11 @@ class Button:
 		self.maxNum = maxNum
 
 	def clicked(self):
+		"""
+		Appends the self.clickNum value or resets it back to zero depending on whether or not it equals the maxNum value
+		ParamList: self (self)
+		Returns: none
+		"""
 		if self.clickNum == self.maxNum:
 			self.clickNum = 0
 		else:
@@ -22,9 +32,19 @@ class Button:
 			self.image = self.imagelist[self.clickNum]
 
 	def isCorrect(self):
+		"""
+		Returns self.clickNum as self.correctNum
+		ParamList: self (self)
+		Returns: self.clickNum == self.correctNum
+		"""
 		return self.clickNum == self.correctNum
 
 	def isRemoved(self):
+		"""
+		Removes the button object from the view
+		ParamList: self (self)
+		Returns: none
+		"""
 		self.top_x = 0
 		self.top_y = 0
 		self.width = 0
